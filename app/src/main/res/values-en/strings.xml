@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">aapt</string>
+    <string name="title_name">APK Information Viewer</string>
+    <string name="open_button">open</string>
+    <string name="tips_select_apk">please open an apk file</string>
+    <string name="tips_no_fileselector">no file selector exist</string>
+</resources>

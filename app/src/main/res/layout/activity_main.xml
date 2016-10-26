@@ -11,15 +11,41 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.kappa.aapt.MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+        <TextView
+            android:id="@+id/title_path_txv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="600dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginLeft="100dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"/>
+        <Button
+            android:id="@+id/title_open_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity = "right"
+            android:text="@string/open_button"/>
+    </android.support.v7.widget.Toolbar>
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_below="@id/activity_main_toolbar"
+        >
 
         <TextView
             android:id="@+id/sample_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
     </ScrollView>
 
 </RelativeLayout>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">aapt</string>
+    <string name="title_name">APK信息查看</string>
+    <string name="open_button">打开</string>
+    <string name="tips_select_apk">请选择要查看的APK</string>
+    <string name="tips_no_fileselector">请安装文件管理器</string>
 </resources>

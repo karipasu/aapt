@@ -222,13 +222,12 @@ static void printCompatibleScreens(ResXMLTree& tree) {
 
 
 
-int doDump()
+int doDump(const char * filename)
 {
     int result = 0;
     Asset *asset = NULL;
 
     const char *option = "badging";
-    const char *filename = "/sdcard/abc.apk";
 
     AssetManager assets;
     void *assetsCookie;
@@ -1214,11 +1213,14 @@ int doDump()
 
 extern "C"
 jstring
-Java_com_kappa_aapt_MainActivity_stringFromJNI(
+Java_com_kappa_aapt_MainActivity_getApkInfo(
         JNIEnv *env,
-        jobject /* this */)
+        jobject obj,
+        jstring path)
 {
+    const char * csPath = env->GetStringUTFChars(path,0);
     g_ReturnString.clear();
-    doDump();
+    doDump(csPath);
+    env->ReleaseStringUTFChars(path,csPath);
     return env->NewStringUTF(g_ReturnString.c_str());
 }
